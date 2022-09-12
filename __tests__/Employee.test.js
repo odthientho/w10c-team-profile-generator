@@ -11,7 +11,7 @@ describe("Initialization", () => {
     });
 
     describe("should throw an error when giving an Object with no/missing variables", () => {
-        const err = new Error("Please input name, id and email.");
+        const err = new Error("Please input enough arguments.");
         it("has no arguments", () => {
             try {
                 const employee = new Employee();
@@ -83,7 +83,7 @@ describe("Initialization", () => {
     });
 });
 
-describe("Calling Functions", () => {
+describe("Calling functions", () => {
     it("should return name when function getName called", () => {
         const employee = new Employee("Arthur", 1, "arthur@gmail.com");
         expect(employee.getName()).toEqual("Arthur");
