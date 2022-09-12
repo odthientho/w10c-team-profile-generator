@@ -1,0 +1,31 @@
+{
+  "name": "w10c-team-profile-generator",
+  "version": "1.0.0",
+  "description": "generating a team profiles automically",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "watch": "nodemon index",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odthientho/w10c-team-profile-generator.git"
+  },
+  "keywords": [
+    "profile",
+    "generator"
+  ],
+  "author": "arthur ong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/odthientho/w10c-team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/odthientho/w10c-team-profile-generator#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "inquirer": "8.2.4"
+  }
+}
