@@ -1,7 +1,7 @@
 const Engineer = require('../lib/Engineer');
 
 describe('Initialization', () => {
-    it('should create an Engineer with proper inputs (name, id, email, github)', () => {
+    it('should create an Engineer Object with proper inputs (name, id, email, github)', () => {
         const engineer = new Engineer("Arthur", 1, "arthur@gmail.com", "odthientho");
         expect(engineer.github).toEqual("odthientho");
     });
