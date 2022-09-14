@@ -7,7 +7,7 @@ describe('Initialization', () => {
     });
     it('should throw Error when missing school argument', () => {
         try {
-            const intern = new Intern("Arthur", 1, "arthur@gmail.com");
+            const intern = new Intern("Arthur", 2, "arthur@gmail.com");
         } catch(error) {
             const err = new Error("Please input enough arguments.");
             expect(error).toEqual(err);
@@ -17,11 +17,11 @@ describe('Initialization', () => {
 
 describe('Calling functions', () => {
     it('should get school when getSchool called', () => {
-        const intern = new Intern("Arthur", 1, "arthur@gmail.com", "GTech");
+        const intern = new Intern("Arthur", 3, "arthur@gmail.com", "GTech");
         expect(intern.getSchool()).toEqual("GTech");
     });
     it('should get Engineer role when getRole called', () => {
-        const intern = new Intern("Arthur", 1, "arthur@gmail.com", "GTech");
+        const intern = new Intern("Arthur", 4, "arthur@gmail.com", "GTech");
         expect(intern.getRole()).toEqual("Intern");
     });
 });
