@@ -1,4 +1,36 @@
-
+var employees = [{"name":"Arthur","id":1,"email":"arthur@gmail.com","officeNumber":1001,"role":"Manager"}]// var employees = [{
+//     name: 'Arthur',
+//     id: 1,
+//     email: 'arthur@gmail.com',
+//     officeNumber: 1001,
+//     role: 'manager'
+// },
+// {
+//     name: 'John',
+//     id: 2,
+//     email: 'john@gmail.com',
+//     github: 'john',
+//     role: 'engineer'
+// },{
+//     name: 'Eugene',
+//     id: 3,
+//     email: 'eugene@gmail.com',
+//     github: 'eugene',
+//     role: 'engineer'
+// },{
+//     name: 'Aaron',
+//     id: 4,
+//     email: 'aaron@gmail.com',
+//     github: 'aaron',
+//     role: 'engineer'
+// },
+// {
+//     name: 'Raphael',
+//     id: 5,
+//     email: 'raphael@gmail.com',
+//     school: 'GTech',
+//     role: 'intern'
+// }];
 
 var profileUl = document.getElementById("profile");
 
@@ -42,7 +74,7 @@ function profileBuilder() {
             
             var officeNumberLi = document.createElement("li");
             officeNumberLi.setAttribute("class", "officeNumber");
-            officeNumberLi.innerHTML = "Enail: " + employee.officeNumber;
+            officeNumberLi.innerHTML = "Office Number: " + employee.officeNumber;
             infoUl.appendChild(officeNumberLi);
 
         } else if (employee.role == "Engineer") {

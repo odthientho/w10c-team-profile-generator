@@ -1,0 +1,67 @@
+body {
+    min-width: 500px;
+}
+
+header {
+    height: 100px;
+    background-color: brown;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+header div {
+    padding-top: 25px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+main {
+    width: 75%;
+    margin: auto;
+}
+
+#profile {
+    margin-top: 50px;
+}
+
+#profile>li {
+    width: 180px;
+    height: 100%;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+.title {
+    background-color: rgb(36, 140, 238);
+    color: white;
+    font-size: 20px;
+    padding: 10px 5px;
+}
+
+.title>li {
+    padding: 2px 10px;
+}
+
+.info {
+    background-color: rgb(181, 191, 202);
+    color: black;
+    font-size: 13px;
+    padding: 20px 0;
+}
+
+.info>li {
+    background-color: rgb(227, 235, 241);
+    margin:2px 10px;
+    padding: 8px 10px;
+}
