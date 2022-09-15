@@ -32,7 +32,7 @@ function profileBuilder() {
     
         var emailLi = document.createElement("li");
         emailLi.setAttribute("class", "email");
-        emailLi.innerHTML = "Enail: <a href='mailto:" + employee.email +"'>" + employee.email + "</a>";
+        emailLi.innerHTML = "Email: <a href='mailto:" + employee.email +"'>" + employee.email + "</a>";
         infoUl.appendChild(emailLi);
     
         outerLi.appendChild(titleUl);
@@ -42,7 +42,7 @@ function profileBuilder() {
             
             var officeNumberLi = document.createElement("li");
             officeNumberLi.setAttribute("class", "officeNumber");
-            officeNumberLi.innerHTML = "Enail: " + employee.officeNumber;
+            officeNumberLi.innerHTML = "Office Number: " + employee.officeNumber;
             infoUl.appendChild(officeNumberLi);
 
         } else if (employee.role == "Engineer") {
