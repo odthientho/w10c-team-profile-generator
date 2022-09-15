@@ -1,10 +1,7 @@
 // TODO: Include packages needed for this application
-const validations = require('./helpers/validation');
 const inquirer = require('inquirer');
-const fs = require('fs');
-const Manager = require('./lib/Manager');
-const Engineer = require('./lib/Engineer');
-const Intern = require('./lib/Intern');
+const validations = require('./helpers/validation');
+const profileBuilder = require('./helpers/profileBuilder');
 
 const prompt = inquirer.createPromptModule();
 
@@ -62,7 +59,7 @@ function managerPrompt() {
     let questions = employeeQuestions("manager").concat(managerQuestion);
     prompt(questions)
     .then((data) => {
-        let manager = new Manager(data.name, parseInt(data.id), data.email, parseInt(data.officeNumber));
+        profileBuilder.addAnEmployee("manager", data);
         addingRolePrompt();
     })
     .catch((err) => {
@@ -75,7 +72,7 @@ function engineerPrompt() {
     let questions = employeeQuestions("engineer").concat(engineerQuestion);
     prompt(questions)
     .then((data) => {
-        let engineer = new Engineer(data.name, parseInt(data.id), data.email, data.github);
+        profileBuilder.addAnEmployee("engineers", data);
         addingRolePrompt();
     })
     .catch((err) => {
@@ -88,7 +85,7 @@ function internPrompt() {
     let questions = employeeQuestions("intern").concat(internQuestion);
     prompt(questions)
     .then((data) => {
-        let intern = new Intern(data.name, parseInt(data.id), data.email, data.school);
+        profileBuilder.addAnEmployee("interns", data);
         addingRolePrompt();
     })
     .catch((err) => {
@@ -104,20 +101,9 @@ function addingRolePrompt() {
         employeeType = data.role;
         if (employeeType == "Engineer") engineerPrompt();
         else if (employeeType == "Intern") internPrompt();
-        else console.log(data);
+        else console.log(profileBuilder.build());
     })
     .catch((err) => {
         console.log(err);
     });
-
-}
-
-function writeToFile(fileName, data) {
-    const fileREADME = fileName.split('/')[2];
-    const pathToREADME = fileName.replace(fileREADME,"");
-
-    fs.mkdir(pathToREADME, { recursive: true }, (err) => { if (err) throw err; });
-    fs.writeFile(fileName, data, (err) =>
-        err ? console.error(err) : console.log('Success!')
-    );
 }
