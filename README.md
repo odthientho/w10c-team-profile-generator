@@ -36,7 +36,7 @@ This app is a Node.js command-line application that takes in information about e
   node index.js
   ```
 
-  You can also follow the walk-through video here to understand how to use the app --- [Walking-through video for README  application](https://drive.google.com/file/d/182-JynirH2tO-dPBYFoG6wExYLYCBMXe/view) ---
+  You can also follow the walk-through video here to understand how to use the app --- [Walking-through video for Team-Profile-Generator application](https://drive.google.com/file/d/1ryVSeqhdq6f3_v1EgGpded0JPSN9tu8H/view) ---
 
   ##  License
   This project is licensed under the Unlicensed.
